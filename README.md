@@ -5,9 +5,8 @@ Lars++ is a C++ and Matlab software library for solving L1-regularized
 least-squares, both exactly and approximately.  It is based on the
 paper:
 
-Efron, B., Johnstone, I., Hastie, T. and Tibshirani, R. (2002). Least
-angle regression ps file; pdf file To appear, Annals of Statistics
-2003
+Efron, B., Johnstone, I., Hastie, T. and Tibshirani, R. (2002). Least angle regression
+Annals of Statistics 2003
 
 All code contained in this package, excepting the reference BLAS and
 CBLAS implementations is copyrighted.  See the LICENSE.txt file for
