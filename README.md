@@ -159,13 +159,13 @@ An important data type that we use is a Sparse Vector.  This is an STL
 vector of pairs of integers and floating point values.  Each pair
 represents a non-zero element of the sparse vector.  This is:
 
-vector< pair<int,T> > beta
+`vector< pair<int,T> > beta`
 
 where T is either float or double.  The ith index is beta[i].first,
 and the corresponding value is beta[i].second.  We also use arrays of
 these sparse vectors (i.e., a sparse matrix), which has the signature:
 
-vector< vector< pair<int,T> > > beta
+`vector< vector< pair<int,T> > > beta`
 
 These may be flattened into C-style arrays/matrices (always
 column-major ordering) using some utility functions that we include in
@@ -174,8 +174,8 @@ the lars_interface.h header.
 Also in lars_interface.h are several other functions that may be of
 use for C++ users.  In all, the functions in this file are:
 
-FOR SINGLE RIGHT-HAND-SIDES:
-  template<typename T>
+### FOR SINGLE RIGHT-HAND-SIDES:
+  `template<typename T>
   inline int lars(vector< vector< pair<int,T> > >* beta,
 		  const T* X,
 		  const T* y,
@@ -186,10 +186,10 @@ FOR SINGLE RIGHT-HAND-SIDES:
 		  const T stop_val = T(0),
 		  const bool return_whole_path = true,
 		  const bool least_squares_beta = false,
-		  const bool verbose = false);
+		  const bool verbose = false);`
 
-FOR MULTIPLE RIGHT-HAND-SIDES:
-  template<typename T>
+### FOR MULTIPLE RIGHT-HAND-SIDES:
+  `template<typename T>
   inline int lars(vector< vector< pair<int,T> > >* beta,
 		  const T* X,
 		  const T* Y,
@@ -200,31 +200,31 @@ FOR MULTIPLE RIGHT-HAND-SIDES:
 		  const STOP_TYPE stop_type = -1,
 		  const T stop_val = T(0),
 		  const bool least_squares_beta = false,
-		  const bool verbose = false);
+		  const bool verbose = false);`
 
-COMPUTE THE L1 NORM OF BETA:
-  template<typename T>
-  inline T l1NormSparseVector(const vector< pair<int,T> >& beta);
+### COMPUTE THE L1 NORM OF BETA:
+  `template<typename T>
+  inline T l1NormSparseVector(const vector< pair<int,T> >& beta);`
 
-FLATTEN A SINGLE SPARSE VECTOR INTO A C-ARRAY:
-  template<typename T>
+### FLATTEN A SINGLE SPARSE VECTOR INTO A C-ARRAY:
+  `template<typename T>
   inline void flattenSparseVector(const vector< pair<int,T> >& beta, 
-				  T* beta_dense, const int p);
+				  T* beta_dense, const int p);`
 
-FLATTEN A VECTOR OF SPARSE VECTORS INTO A C-ARRAY:
-  template<typename T>
+### FLATTEN A VECTOR OF SPARSE VECTORS INTO A C-ARRAY:
+  `template<typename T>
   inline void flattenSparseMatrix(const vector< vector< pair<int,T> > >& beta, 
-				  T* beta_dense, const int p, const int M);
+				  T* beta_dense, const int p, const int M);`
 
-PRINT A VECTOR OF SPARSE VECTORS AS A MATRIX:
-  template<typename T>
+### PRINT A VECTOR OF SPARSE VECTORS AS A MATRIX:
+  `template<typename T>
   inline void printMatrix(T* a, const int N, const int p, 
-			  string label, std::ostream& out);
+			  string label, std::ostream& out);`
 
-INTERPOLATE BETWEEN TWO SPARSE VECTORS:
-  template<typename T>
+### INTERPOLATE BETWEEN TWO SPARSE VECTORS:
+  `template<typename T>
   inline void interpolateSparseVector(vector< pair<int,T> >* beta_interp,
 				      const int p,
 				      const vector< pair<int,T> >& beta_old,
 				      const vector< pair<int,T> >& beta_new,
-				      const T f);
+				      const T f);`
