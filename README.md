@@ -1,10 +1,5 @@
-# larscpp
-least angle regression in C++ - solves L1 least squares linear regression with full regularization path
-LARS!
-
-**********
-* LARS++ *
-**********
+LARS++
+======
 
 Lars++ is a C++ and Matlab software library for solving L1-regularized
 least-squares, both exactly and approximately.  It is based on the
@@ -23,9 +18,8 @@ no warranty.
 Copyright (c) 2006 Varun Ganapathi, David Vickery, James Diebel,
 Stanford University
 
-***********
-* LICENSE *
-***********
+
+## LICENSE
 
 See the file LICENSE.txt for the full license.
 
@@ -45,9 +39,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 02110-1301 USA.
 
 
-************************
-* STATEMENT OF PROBLEM *
-************************
+
+## STATEMENT OF PROBLEM
 
 Variables:
   - int N is the number of samples
@@ -81,10 +74,7 @@ non-zero elements in beta.
   
 We provide several interfaces to this problem, described below.
 
-
-****************
-* INSTALLATION *
-****************
+## INSTALLATION
 
 The user may either use the included BLAS/CBLAS or link to
 user-supplied versions (for details, please see the next section of
@@ -128,9 +118,8 @@ This is only a superficial change from typing 'make' since the latter
 will just exit once it can't find the Matlab compiler script.
 
 
-**********************
-* USER-PROVIDED BLAS *
-**********************
+
+## USER-PROVIDED BLAS
 
 We have designed this to be as fast as possible. Computationally
 intensive operations are performed with calls to BLAS through the
@@ -146,9 +135,8 @@ Another fast BLAS is called ATLAS.  This may be found at:
 http://math-atlas.sourceforge.net/
 
 
-********************
-* MATLAB INTERFACE *
-********************
+
+## MATLAB INTERFACE
 
 The public interface in Matlab is provided in larspp.m.  In Matlab,
 type 
@@ -158,9 +146,8 @@ help larspp
 for details on how to use this.
 
 
-*****************
-* C++ INTERFACE *
-*****************
+
+## C++ INTERFACE
 
 The C++ interface is contained in lars_interface.h.  There are two C++
 functions to run LARS.  The first accepts a single right-hand-side and
