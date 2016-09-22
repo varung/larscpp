@@ -83,11 +83,13 @@ If the user wishes to use the included reference implementations, they
 must compile them.  To do this (starting from the unpacked source
 directory):
 
+```
 cd blas
 make
 cd ../cblas
 make
 cd ..
+```
 
 This will create two libraries (liblarsblas.a and liblarscblas.a) in
 the main source directory.  These are the default choice in the
